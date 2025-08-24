@@ -10,7 +10,7 @@ import com.yky.myaicode.constant.UserConstant;
 import com.yky.myaicode.exception.BusinessException;
 import com.yky.myaicode.exception.ErrorCode;
 import com.yky.myaicode.exception.ThrowUtils;
-import com.yky.myaicode.model.dto.*;
+import com.yky.myaicode.model.dto.user.*;
 import com.yky.myaicode.model.vo.LoginUserVO;
 import com.yky.myaicode.model.vo.UserVO;
 import jakarta.annotation.Resource;
