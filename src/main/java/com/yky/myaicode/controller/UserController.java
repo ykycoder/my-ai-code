@@ -15,13 +15,10 @@ import com.yky.myaicode.model.vo.LoginUserVO;
 import com.yky.myaicode.model.vo.UserVO;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import com.yky.myaicode.model.entity.User;
 import com.yky.myaicode.service.UserService;
-import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
 
 /**
@@ -80,7 +77,7 @@ public class UserController {
      * @param request 请求对象
      * @return
      */
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     public BaseResponse<Boolean> userLogout(HttpServletRequest request) {
         ThrowUtils.throwIf(request == null, ErrorCode.PARAMS_ERROR);
         boolean result = userService.userLogout(request);
